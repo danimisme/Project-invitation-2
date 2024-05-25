@@ -2,16 +2,22 @@ import { useState, useEffect } from 'react';
 import './Countdown.css';
 
 export default function Countdown() {
-    const initialTime = 360000; // Waktu awal dalam detik (misalnya, 1 jam)
-    const [timeRemaining, setTimeRemaining] = useState(initialTime);
+    const initialTime = 99999999; // Waktu awal dalam detik (misalnya, 1 jam)
+    const [timeRemaining, setTimeRemaining] = useState(
+        localStorage.getItem('timeRemaining') || initialTime
+    );
 
     useEffect(() => {
-        if (timeRemaining > 0) {
-            const timerId = setTimeout(() => {
+        const timerId = setInterval(() => {
+            if (timeRemaining > 0) {
                 setTimeRemaining(timeRemaining - 1);
-            }, 1000);
-            return () => clearTimeout(timerId); // Membersihkan timer saat komponen unmount
-        }
+                localStorage.setItem('timeRemaining', timeRemaining - 1);
+            }
+        }, 1000);
+
+        return () => {
+            clearInterval(timerId);
+        };
     }, [timeRemaining]);
 
     const days = Math.floor(timeRemaining / 86400);
