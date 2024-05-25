@@ -1,3 +1,4 @@
+import Countdown from '../../Countdown';
 import './Hero.css';
 
 const MainHero = () => {
@@ -7,7 +8,8 @@ const MainHero = () => {
                 <h4>Kepada Bapak/Ibu/Saudara/i</h4>
                 <h1>Mat Jaung & Imaw Boting</h1>
                 <p>Akan melangsungkan resepsi pernikahan dalam:</p>
-                <a className="btn btn-lg" href="#undangan">
+                <Countdown />
+                <a className="btn btn-lg mt-4" href="#undangan">
                     Lihat Undangan
                 </a>
             </main>
