@@ -29,6 +29,9 @@
         font-size: 2rem;
         text-align: center;
     }
+    .mynavbar.offcanvas {
+        overflow: hidden;
+    }
 }
 /* mobile */
 @media (max-width: 576px) {
