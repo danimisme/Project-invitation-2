@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './Countdown.css';
 
 export default function Countdown() {
-    const initialTime = 99999999; // Waktu awal dalam detik (misalnya, 1 jam)
+    const initialTime = 99999999;
     const [timeRemaining, setTimeRemaining] = useState(
         localStorage.getItem('timeRemaining') || initialTime
     );

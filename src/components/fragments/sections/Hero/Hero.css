@@ -28,6 +28,7 @@
     font-family: 'Sacramento', cursive;
     font-size: 6rem;
     color: var(--pink);
+    font-weight: bold;
 }
 
 .hero p {
