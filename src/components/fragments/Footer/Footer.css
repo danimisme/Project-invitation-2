@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+    color: #fff;
+    padding: 1rem;
+    font-size: 1rem;
+    flex-direction: column;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer li {
+    list-style: none;
+}
+
+.footer li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+.footer a:hover {
+    color: var(--pink);
+}

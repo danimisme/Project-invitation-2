@@ -1,3 +1,4 @@
+import Footer from '../components/fragments/Footer';
 import Navbar from '../components/fragments/Navbar';
 import MainHero from '../components/fragments/sections/Hero';
 
@@ -8,6 +9,7 @@ const MainLayout = (prop) => {
             <MainHero />
             <Navbar />
             {children}
+            <Footer />
         </div>
     );
 };

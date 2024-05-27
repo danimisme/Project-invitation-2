@@ -1,5 +1,6 @@
 import MainLayout from '../../layouts/MainLayout';
 import Gallery from '../fragments/sections/Gallery';
+import Gifts from '../fragments/sections/Gifts/indes';
 import Home from '../fragments/sections/Home';
 import Info from '../fragments/sections/Info';
 import RSVP from '../fragments/sections/RSVP/indes';
@@ -13,6 +14,7 @@ const MainViews = () => {
             <Story />
             <Gallery />
             <RSVP />
+            <Gifts />
         </MainLayout>
     );
 };
