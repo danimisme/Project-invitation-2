@@ -1,7 +1,7 @@
 import './Navbar.css';
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-md mynavbar">
+        <nav className="navbar navbar-expand-md sticky-top mynavbar">
             <div className="container">
                 <a className="navbar-brand" href="#">
                     Wedding

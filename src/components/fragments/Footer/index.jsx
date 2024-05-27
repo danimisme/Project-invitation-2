@@ -2,7 +2,7 @@ import './Footer.css';
 
 export default function Footer() {
     return (
-        <div className="footer">
+        <footer className="footer">
             <p>
                 &copy; Copyright 2022. All Rights Reserved. Designed by{' '}
                 <a href="">Daffa Tabiano</a>.
@@ -44,6 +44,6 @@ export default function Footer() {
                     </a>{' '}
                 </li>
             </ul>
-        </div>
+        </footer>
     );
 }
