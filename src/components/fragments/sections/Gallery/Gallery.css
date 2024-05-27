@@ -1,27 +1,6 @@
-.gallery h2 {
-    color: var(--pink);
-    font-family: 'Sacramento', cursive;
-    font-size: 5rem;
-    font-weight: bold;
-}
-
 .gallery {
     padding-top: 10rem;
     padding-bottom: 8rem;
-}
-
-.gallery span {
-    text-transform: uppercase;
-    color: #666;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-    display: block;
-}
-
-.gallery p {
-    font-size: 1rem;
-    font-weight: 300;
 }
 
 .gallery {

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Countdown.css';
+import CountdownSection from '../../ui/CountdownSection';
 
 export default function Countdown() {
     const initialTime = 99999999;
@@ -28,18 +29,10 @@ export default function Countdown() {
     return (
         <div className="countdown">
             <div>
-                <div className="section">
-                    <span>{days}</span>hari
-                </div>
-                <div className="section">
-                    <span>{hours}</span> jam
-                </div>
-                <div className="section">
-                    <span>{minutes}</span> menit
-                </div>
-                <div className="section">
-                    <span>{seconds}</span> detik
-                </div>
+                <CountdownSection time={days} text="Hari" />
+                <CountdownSection time={hours} text="Jam" />
+                <CountdownSection time={minutes} text="Menit" />
+                <CountdownSection time={seconds} text="Detik" />
             </div>
         </div>
     );

@@ -1,3 +1,4 @@
+import Bride from '../../../ui/Bride';
 import './Home.css';
 
 const Home = () => {
@@ -20,56 +21,30 @@ const Home = () => {
                 </div>
 
                 <div className="row couple">
-                    <div className="col-lg-6">
-                        <div className="row">
-                            <div className="col-8 text-end">
-                                <h3>Mat Jaung</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
+                    <Bride
+                        name="Mat Jaung"
+                        word="Lorem ipsum dolor sit amet consectetur
                                     adipisicing elit. Eaque, enim magni velit
-                                    qui amet rem?
-                                </p>
-                                <p>
-                                    Putra dari Bpk. Lorem <br /> dan <br />
-                                    Ibu Ipsum{' '}
-                                </p>
-                            </div>
-                            <div className="col-4">
-                                <img
-                                    src="/images/male.jpg"
-                                    alt="mat jaung"
-                                    className="img-responsive rounded-circle"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    <span className='heart'>
+                                    qui amet rem?"
+                        dad="Lorem"
+                        mom="Ipsum"
+                        image="/images/male.jpg"
+                        classname="row"
+                        option="text-end"
+                    />
+                    <span className="heart">
                         <i className="bi bi-heart-fill"></i>
                     </span>
-                    <div className="col-lg-6">
-                        <div className="row">
-                            <div className="col-4">
-                                <img
-                                    src="/images/female.jpg"
-                                    alt="mat jaung"
-                                    className="img-responsive rounded-circle"
-                                />
-                            </div>
-                            <div className="col-8">
-                                <h3>Imaw Boting</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
+                    <Bride
+                        name="Imaw Boting"
+                        word="Lorem ipsum dolor sit amet consectetur
                                     adipisicing elit. Eaque, enim magni velit
-                                    qui amet rem?
-                                </p>
-                                <p>
-                                    Putra dari Bpk. Ipsum
-                                    <br /> dan <br />
-                                    Ibu Lorem{' '}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                                    qui amet rem?"
+                        dad="Ipsum"
+                        mom="Lorem"
+                        image="/images/female.jpg"
+                        classname="row reverse"
+                    />
                 </div>
             </div>
         </section>

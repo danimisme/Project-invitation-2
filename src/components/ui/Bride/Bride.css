@@ -1,0 +1,13 @@
+.couple {
+    margin-top: 100px;
+}
+
+.couple img {
+    width: 100%;
+}
+
+.couple h3 {
+    font-family: 'Sacramento', cursive;
+    font-size: 2.4rem;
+    color: var(--pink);
+}

@@ -1,92 +1,46 @@
+import Head from '../../../ui/Head';
+import Timeline from '../../../ui/Timeline';
 import './Story.css';
 
 const Story = () => {
     return (
         <section id="story" className="story">
             <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-md-8 col-10 text-center">
-                        <span>Bagaimana cinta kami bersemi</span>
-                        <h2>Cerita Kami</h2>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                <Head
+                    tagline="Bagaimana cinta kami bersemi"
+                    title="Cerita Kami"
+                    desc="   Lorem ipsum dolor sit, amet consectetur adipisicing
                             elit. Laudantium natus, error recusandae corrupti
-                            asperiores accusamus?
-                        </p>
-                    </div>
-                </div>
+                            asperiores accusamus?"
+                />
                 <div className="row">
                     <div className="col">
                         <ul className="timeline">
-                            <li>
-                                <div
-                                    className="timeline-image"
-                                    style={{
-                                        backgroundImage:
-                                            "url('images/rankum.jpg')",
-                                    }}
-                                ></div>
-                                <div className="timeline-panel">
-                                    <div className="timeline-heading">
-                                        <h3>Pertama bertemu</h3>
-                                        <span>1 Juni 2000</span>
-                                    </div>
-                                    <div className="timeline-body">
-                                        <p>
-                                            Lorem ipsum dolor sit amet
+                            <Timeline
+                                image="images/rankum.jpg"
+                                headline="Pertama bertemu"
+                                date="20 Februari 1980"
+                                bodyline="Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. In
                                             quidem minus enim dolore velit
-                                            vitae?
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li className="timeline-inverted">
-                                <div
-                                    className="timeline-image"
-                                    style={{
-                                        backgroundImage:
-                                            "url('images/rankum2.jpg')",
-                                    }}
-                                ></div>
-                                <div className="timeline-panel">
-                                    <div className="timeline-heading">
-                                        <h3>Mulai Serius</h3>
-                                        <span>1 Agustus 2020</span>
-                                    </div>
-                                    <div className="timeline-body">
-                                        <p>
-                                            Lorem ipsum dolor sit amet
+                                            vitae?"
+                            />
+                            <Timeline
+                                image="images/rankum2.jpg"
+                                headline="Mulai Serius"
+                                date="1 Agustus 2000"
+                                bodyline="Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. In
                                             quidem minus enim dolore velit
-                                            vitae?
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li className="timeline">
-                                <div
-                                    className="timeline-image"
-                                    style={{
-                                        backgroundImage:
-                                            "url('images/rankum3.jpg')",
-                                    }}
-                                ></div>
-                                <div className="timeline-panel">
-                                    <div className="timeline-heading">
-                                        <h3>Disuruh Nikah</h3>
-                                        <span>17 Agustus 1945</span>
-                                    </div>
-                                    <div className="timeline-body">
-                                        <p>
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. In
-                                            quidem minus enim dolore velit
-                                            vitae?
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
+                                            vitae?"
+                                classname="timeline-inverted"
+                            />
+                            <Timeline
+                                image="images/rankum3.jpg"
+                                headline="Disuruh Nikah"
+                                date="17 Agustus 1945"
+                                bodyline="Lorem ipsum dolor sit amet consectetur adipisicing elit. In quidem minus enim dolore velit vitae?"
+                            />
                         </ul>
                     </div>
                 </div>

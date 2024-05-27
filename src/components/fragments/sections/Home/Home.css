@@ -39,6 +39,10 @@
     color: var(--pink);
 }
 
+.home .reverse {
+    flex-direction: row-reverse;
+}
+
 .home .heart {
     width: 50px;
     height: 50px;

@@ -1,3 +1,4 @@
+import Card from '../../../ui/Card';
 import './Info.css';
 
 const Info = () => {
@@ -29,50 +30,16 @@ const Info = () => {
                 </div>
 
                 <div className="row justify-content-center mt-4">
-                    <div className="col-md-5 col-10">
-                        <div className="card text-center text-bg-light mb-5">
-                            <div className="card-header">Akad Nikah</div>
-                            <div className="card-body">
-                                <div className="row justify-content-center">
-                                    <div className="col-md-6">
-                                        <i className="bi bi-clock-fill d-block"></i>
-                                        <span>08.00 WIB - 10.00 WIB</span>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <i className="bi bi-calendar3 d-block"></i>
-                                        <span>Minggu, 17 Agustus 1945</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="card-footer">
-                                Saat acara akad diharapkan untuk kondusif
-                                menjaga kekhidmatan dan kekhusyuan seluruh
-                                prosesi
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-5 col-10">
-                        <div className="card text-center text-bg-light">
-                            <div className="card-header">Resepsi</div>
-                            <div className="card-body">
-                                <div className="row justify-content-center">
-                                    <div className="col-md-6">
-                                        <i className="bi bi-clock-fill d-block"></i>
-                                        <span>11.00 WIB - Selesai</span>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <i className="bi bi-calendar3 d-block"></i>
-                                        <span>Minggu, 17 Agustus 1945</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="card-footer">
-                                Saat acara akad diharapkan untuk kondusif
-                                menjaga kekhidmatan dan kekhusyuan seluruh
-                                prosesi
-                            </div>
-                        </div>
-                    </div>
+                    <Card
+                        head="Akad Nikah"
+                        icon="clock-fill"
+                        hours="08.00 WIB - 10.00 WIB"
+                    />
+                    <Card
+                        head="Resepsi"
+                        icon="calendar3"
+                        hours="11.00 WIB - Selesai"
+                    />
                 </div>
             </div>
         </section>
