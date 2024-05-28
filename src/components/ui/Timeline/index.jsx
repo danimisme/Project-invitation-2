@@ -1,6 +1,6 @@
 import './Timeline.css';
 export default function Timeline(prop) {
-    const { image, headline, date, bodyline, classname } = prop;
+    const { image, headline, date, bodyline, classname, ...rest } = prop;
     return (
         <li className={classname}>
             <div
@@ -8,8 +8,8 @@ export default function Timeline(prop) {
                 style={{
                     backgroundImage: `url(${image})`,
                 }}
-            ></div>
-            <div className="timeline-panel">
+            />
+            <div {...rest} className="timeline-panel">
                 <div className="timeline-heading">
                     <h3>{headline}</h3>
                     <span>{date}</span>

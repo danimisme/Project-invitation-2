@@ -17,26 +17,32 @@ const Gallery = () => {
                     <Thumbnail
                         thumbnail="images/thumbnail.jpg"
                         image="images/gallery/thumbnail.jpg"
+                        data-aos="flip-down"
                     />
                     <Thumbnail
                         thumbnail="images/thumbnail2.jpg"
                         image="images/gallery/thumbnail2.jpg"
+                        data-aos="flip-up"
                     />
                     <Thumbnail
                         thumbnail="images/thumbnail3.jpg"
                         image="images/gallery/thumbnail3.jpg"
+                        data-aos="flip-down"
                     />
                     <Thumbnail
                         thumbnail="images/thumbnail4.jpg"
                         image="images/gallery/thumbnail4.jpg"
+                        data-aos="flip-up"
                     />
                     <Thumbnail
                         thumbnail="images/thumbnail5.jpg"
                         image="images/gallery/thumbnail5.jpg"
+                        data-aos="flip-down"
                     />
                     <Thumbnail
                         thumbnail="images/thumbnail6.jpg"
                         image="images/gallery/thumbnail6.jpg"
+                        data-aos="flip-up"
                     />
                 </div>
             </div>

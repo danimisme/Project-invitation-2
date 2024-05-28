@@ -1,7 +1,7 @@
 export default function Card(prop) {
-    const { head, icon, hours } = prop;
+    const { head, icon, hours, ...rest } = prop;
     return (
-        <div className="col-md-5 col-10">
+        <div {...rest} className="col-md-5 col-10">
             <div className="card text-center text-bg-light mb-5">
                 <div className="card-header">{head}</div>
                 <div className="card-body">

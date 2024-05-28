@@ -1,8 +1,8 @@
 export default function Thumbnail(prop) {
-    const { thumbnail, image } = prop;
+    const { thumbnail, image, ...rest } = prop;
     return (
         <>
-            <div className="col mt-5">
+            <div {...rest} className="col mt-5">
                 <a
                     href={thumbnail}
                     data-toggle="lightbox"

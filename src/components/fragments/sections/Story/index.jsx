@@ -24,6 +24,7 @@ const Story = () => {
                                             consectetur adipisicing elit. In
                                             quidem minus enim dolore velit
                                             vitae?"
+                                data-aos="fade-down-right"
                             />
                             <Timeline
                                 image="images/rankum2.jpg"
@@ -34,12 +35,15 @@ const Story = () => {
                                             quidem minus enim dolore velit
                                             vitae?"
                                 classname="timeline-inverted"
+                                data-aos="fade-down-left"
+                                
                             />
                             <Timeline
                                 image="images/rankum3.jpg"
                                 headline="Disuruh Nikah"
                                 date="17 Agustus 1945"
                                 bodyline="Lorem ipsum dolor sit amet consectetur adipisicing elit. In quidem minus enim dolore velit vitae?"
+                                data-aos="fade-down-right"
                             />
                         </ul>
                     </div>

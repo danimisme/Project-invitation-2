@@ -1,11 +1,11 @@
 import './Bride.css';
 
 export default function Bride(prop) {
-    const { name, word, dad, mom, image, classname, option } = prop;
+    const { name, word, dad, mom, image, classname, option, ...rest } = prop;
     return (
         <>
             <div className="col-lg-6">
-                <div className={`${classname}`}>
+                <div {...rest} className={`${classname}`}>
                     <div className={`col-8 ${option}`}>
                         <h3>{name}</h3>
                         <p>{word}</p>

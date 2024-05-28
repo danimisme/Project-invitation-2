@@ -1,13 +1,19 @@
+import { useEffect } from 'react';
 import Bride from '../../../ui/Bride';
 import './Home.css';
+import Animation from '../../../../utils/aos';
 
 const Home = () => {
+    useEffect(() => {
+        Animation();
+    }, []);
+
     return (
         <section id="home" className="home">
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-md-8 text-center">
-                        <h2>Acara Pernikahan</h2>
+                        <h2 data-aos="fade-up">Acara Pernikahan</h2>
                         <h3>
                             Diselenggarakan pada 17 Agustus 1945 di Jakarta,
                             Indonesia
@@ -31,6 +37,7 @@ const Home = () => {
                         image="/images/male.jpg"
                         classname="row"
                         option="text-end"
+                        data-aos="fade-left"
                     />
                     <span className="heart">
                         <i className="bi bi-heart-fill"></i>
@@ -44,6 +51,7 @@ const Home = () => {
                         mom="Lorem"
                         image="/images/female.jpg"
                         classname="row reverse"
+                        data-aos="fade-right"
                     />
                 </div>
             </div>

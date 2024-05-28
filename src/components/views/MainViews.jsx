@@ -4,16 +4,18 @@ import Gifts from '../fragments/sections/Gifts/indes';
 import Home from '../fragments/sections/Home';
 import Info from '../fragments/sections/Info';
 import Story from '../fragments/sections/Story';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Audio from '../ui/Audio';
 import { useDispatch, useSelector } from 'react-redux';
 import { setOpen } from '../../redux/slice/openSlice';
 import RSVP from '../fragments/sections/RSVP';
+import Animation from '../../utils/aos';
 
 const MainViews = () => {
     const rootElement = document.querySelector(':root');
     const dispatch = useDispatch();
     const isOpen = useSelector((state) => state.open.open);
+
     const disableScroll = () => {
         dispatch(setOpen(false));
         window.onscroll = () => {

@@ -1,13 +1,18 @@
+import { useEffect } from 'react';
 import Card from '../../../ui/Card';
 import './Info.css';
+import Animation from '../../../../utils/aos';
 
 const Info = () => {
+    useEffect(() => {
+        Animation();
+    }, []);
     return (
         <section className="info" id="info">
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-md-8 col-10 text-center">
-                        <h2>Informasi Acara</h2>
+                        <h2 data-aos="fade-up">Informasi Acara</h2>
                         <p className="alamat">
                             Alamat : Gunung Semeru, Ranu Kumbolo. <br />
                             Jl. Raya Ranu Kumbolo - Gunung Semeru, Kec. Ranu
@@ -20,6 +25,7 @@ const Info = () => {
                             allowfullscreen=""
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
+                            data-aos="zoom-in"
                         />
 
                         <a
@@ -43,11 +49,13 @@ const Info = () => {
                         head="Akad Nikah"
                         icon="clock-fill"
                         hours="08.00 WIB - 10.00 WIB"
+                        data-aos="fade-up-right"
                     />
                     <Card
                         head="Resepsi"
                         icon="calendar3"
                         hours="11.00 WIB - Selesai"
+                        data-aos="fade-up-left"
                     />
                 </div>
             </div>
