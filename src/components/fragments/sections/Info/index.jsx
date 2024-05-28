@@ -13,6 +13,15 @@ const Info = () => {
                             Jl. Raya Ranu Kumbolo - Gunung Semeru, Kec. Ranu
                             Kumbolo, Kab. Sumbawa Besar
                         </p>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.5115709087063!2d112.92093755!3d-8.0491835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd63943aafc7f71%3A0xdfe7abf595cdf6bd!2sRanu%20Kumbolo!5e0!3m2!1sid!2sid!4v1716879397610!5m2!1sid!2sid"
+                            width="100%"
+                            height="250"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        />
+
                         <a
                             href="https://maps.app.goo.gl/Ew5VQTfknTfm47CC6"
                             target="_blank"

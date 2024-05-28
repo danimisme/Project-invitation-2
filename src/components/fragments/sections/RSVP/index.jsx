@@ -1,10 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Head from '../../../ui/Head';
 import Input from '../../../ui/Input';
 import './RSVP.css';
+import { useSelector } from 'react-redux';
 
 export default function RSVP() {
     const [isLoading, setIsLoading] = useState(false);
+    const isUrl = useSelector((state) => state.url.url);
 
     const handleSubmit = async (e) => {
         setIsLoading(true);
@@ -49,7 +51,7 @@ export default function RSVP() {
                     method="POST"
                     action="https://script.google.com/macros/s/AKfycbz9CmpaUYOwUbftFJlaCmpSeqv8-0dsNSoJ8wYa_eT1bgVes1Gc1AL5FnMlohjTTivU/exec"
                 >
-                    <Input name="nama" type="text" label="Nama" />
+                    <Input name="nama" type="text" label="Nama" value={isUrl} />
                     <Input
                         name="jumlah"
                         type="number"
@@ -92,6 +94,26 @@ export default function RSVP() {
                         </button>
                     </div>
                 </form>
+
+                <div className="row justify-content-center align-items-center">
+                    <div className="col-md-6 mt-5">
+                        <div id="disqus_thread"></div>
+                        {(function () {
+                            // DON'T EDIT BELOW THIS LINE
+                            var d = document,
+                                s = d.createElement('script');
+                            s.src = 'https://wedding14.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })()}
+                        <noscript>
+                            Please enable JavaScript to view the{' '}
+                            <a href="https://disqus.com/?ref_noscript">
+                                comments powered by Disqus.
+                            </a>
+                        </noscript>
+                    </div>
+                </div>
             </div>
         </div>
     );
