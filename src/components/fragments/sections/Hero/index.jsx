@@ -1,7 +1,10 @@
+import { useDispatch } from 'react-redux';
 import Countdown from '../../Countdown';
 import './Hero.css';
+import { setScroll } from '../../../../redux/slice/ScrollSlice';
 
-const MainHero = () => {
+const MainHero = ({ onClick }) => {
+    const dispatch = useDispatch();
     return (
         <section className="hero w-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
             <main>
@@ -13,6 +16,8 @@ const MainHero = () => {
                     id="show-invitation"
                     className="btn btn-lg mt-4"
                     href="#home"
+                    type="button"
+                    onClick={onClick}
                 >
                     Lihat Undangan
                 </a>

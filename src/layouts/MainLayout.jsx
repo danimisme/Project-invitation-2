@@ -4,10 +4,10 @@ import MainHero from '../components/fragments/sections/Hero';
 import Audio from '../components/ui/Audio';
 
 const MainLayout = (prop) => {
-    const { children } = prop;
+    const { children, onClick } = prop;
     return (
         <div>
-            <MainHero />
+            <MainHero onClick={onClick} />
             <Navbar />
             {children}
             <Footer />
