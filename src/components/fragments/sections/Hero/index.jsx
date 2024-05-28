@@ -4,7 +4,6 @@ import './Hero.css';
 import { setScroll } from '../../../../redux/slice/ScrollSlice';
 
 const MainHero = ({ onClick }) => {
-    const dispatch = useDispatch();
     return (
         <section className="hero w-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
             <main>

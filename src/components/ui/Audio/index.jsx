@@ -1,14 +1,15 @@
+import { useSelector } from 'react-redux';
 import './Audio.css';
 import { useEffect, useState } from 'react';
 
 export default function Audio() {
     const [showIcon, setShowIcon] = useState('none');
     const [icon, setIcon] = useState('bi-disc-fill');
+    const isPlaying = useSelector((state) => state.open.open);
 
     const playAudio = () => {
         const audio = document.getElementById('audio');
         audio.volume = 0.2;
-        setShowIcon('flex');
         setIcon('bi-disc-fill');
         audio.play();
     };
@@ -20,12 +21,14 @@ export default function Audio() {
     };
 
     useEffect(() => {
-        if (icon === 'bi-pause-circle-fill') {
+        if (!isPlaying) {
+            setShowIcon('none');
             pauseAudio();
         } else {
+            setShowIcon('flex');
             playAudio();
         }
-    }, []);
+    }, [isPlaying]);
 
     return (
         <div id="audio-container">

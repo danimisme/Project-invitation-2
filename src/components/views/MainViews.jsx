@@ -6,15 +6,18 @@ import Info from '../fragments/sections/Info';
 import RSVP from '../fragments/sections/RSVP/indes';
 import Story from '../fragments/sections/Story';
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import Audio from '../ui/Audio';
+import { useDispatch, useSelector } from 'react-redux';
+import { setOpen } from '../../redux/slice/openSlice';
 
 const MainViews = () => {
     const rootElement = document.querySelector(':root');
-    const [open, setOpen] = useState(false);
+    const dispatch = useDispatch();
+    const isOpen = useSelector((state) => state.open.open);
     // const scroll = useSelector((state) => state.scroll.scroll);
     // console.log(scroll);
     const disableScroll = () => {
-        setOpen(true);
+        dispatch(setOpen(false));
         window.onscroll = () => {
             window.scrollTo(0, 0);
             rootElement.scrollIntoView({ behavior: 'instant' });
@@ -23,25 +26,28 @@ const MainViews = () => {
 
     const enableScroll = () => {
         window.onscroll = () => {};
-        setOpen(true);
         rootElement.scrollIntoView({ behavior: 'smooth' });
+        dispatch(setOpen(true));
     };
 
     useEffect(() => {
-        if (!open) {
+        if (!isOpen) {
             disableScroll();
         }
-    }, [!open]);
+    }, [!isOpen]);
 
     return (
-        <MainLayout onClick={() => enableScroll()}>
-            <Home />
-            <Info />
-            <Story />
-            <Gallery />
-            <RSVP />
-            <Gifts />
-        </MainLayout>
+        <>
+            <MainLayout onClick={() => enableScroll()}>
+                <Home />
+                <Info />
+                <Story />
+                <Gallery />
+                <RSVP />
+                <Gifts />
+            </MainLayout>
+            <Audio />
+        </>
     );
 };
 
