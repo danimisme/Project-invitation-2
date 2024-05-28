@@ -1,8 +1,40 @@
+import { useEffect, useState } from 'react';
 import Head from '../../../ui/Head';
 import Input from '../../../ui/Input';
 import './RSVP.css';
 
 export default function RSVP() {
+    const [isLoading, setIsLoading] = useState(false);
+
+    const handleSubmit = async (e) => {
+        setIsLoading(true);
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+        const action = form.action;
+
+        try {
+            const response = await fetch(action, {
+                method: 'POST',
+                body: data,
+            });
+
+            if (response.ok) {
+                form.reset();
+                setIsLoading(false);
+                alert(
+                    'Terima kasih sudah melakukan konfirmasi kehadiran anda!'
+                );
+            } else {
+                setIsLoading(false);
+                alert('Gagal melakukan konfirmasi kehadiran anda!');
+            }
+        } catch (error) {
+            setIsLoading(false);
+            console.error('Error', error);
+        }
+    };
+
     return (
         <div className="rsvp" id="rsvp">
             <div className="container">
@@ -10,7 +42,13 @@ export default function RSVP() {
                     title="Konfirmasi Kehadiran"
                     desc="Harap isi form dibawah untuk melakukan konfirmasi kehadiran anda"
                 />
-                <form className="row row-cols-lg-auto g-3  justify-content-center align-items-center">
+                <form
+                    onSubmit={handleSubmit}
+                    className="row row-cols-lg-auto g-3  justify-content-center align-items-center"
+                    id="formsheet"
+                    method="POST"
+                    action="https://script.google.com/macros/s/AKfycbz9CmpaUYOwUbftFJlaCmpSeqv8-0dsNSoJ8wYa_eT1bgVes1Gc1AL5FnMlohjTTivU/exec"
+                >
                     <Input name="nama" type="text" label="Nama" />
                     <Input
                         name="jumlah"
@@ -47,10 +85,10 @@ export default function RSVP() {
                         <label htmlFor="" className="form-label"></label>
                         <button
                             className="btn"
-                            type="button"
-                            onClick={() => {}}
+                            type="submit"
+                            disabled={isLoading}
                         >
-                            Confirm
+                            {isLoading ? 'Loading...' : 'Confirm'}
                         </button>
                     </div>
                 </form>

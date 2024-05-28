@@ -1,7 +1,5 @@
-import { useDispatch } from 'react-redux';
 import Countdown from '../../Countdown';
 import './Hero.css';
-import { setScroll } from '../../../../redux/slice/ScrollSlice';
 
 const MainHero = ({ onClick }) => {
     return (
